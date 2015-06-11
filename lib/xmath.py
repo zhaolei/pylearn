@@ -19,3 +19,9 @@ class xfdata:
 		self.data = d
 		self.target = t
 
+	
+	def save(self):
+		num = 0	
+		for xa in self.data:
+			print "%d %d"%(self.target[num],xa)
+	
