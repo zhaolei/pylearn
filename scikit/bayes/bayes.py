@@ -6,6 +6,8 @@ import numpy
 from sklearn import metrics
 from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.naive_bayes import MultinomialNB
+from sklearn import preprocessing
+
  
  
 def input_data(train_file, test_file):
@@ -59,12 +61,13 @@ def main():
     train_file = sys.argv[1]
     test_file = sys.argv[2]
     train_words, train_tags, test_words, test_tags = input_data(train_file, test_file)
-#print train_words, train_tags
     train_data, test_data = vectorize(train_words, test_words)
     clf = train_clf(train_data, train_tags)
     pred = clf.predict(test_data)
-    print pred
-    evaluate(numpy.asarray(test_tags), pred)
+    lb = preprocessing.LabelBinarizer()
+    teste = lb.fit_transform(test_tags)
+    prede = lb.fit_transform(pred)
+    evaluate(teste, prede)
 
                                              
 if __name__ == '__main__':
