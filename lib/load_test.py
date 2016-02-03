@@ -1,12 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as pyplot
-
 from sklearn.datasets import load_svmlight_file 
 from sklearn import svm
-
 from sklearn import metrics 
+import sys
 
-tx, ty = load_svmlight_file('fpw')
+xfile = 'fpw'
+if len(sys.argv) > 1:
+	xfile = sys.argv[1]
+
+#tx, ty = load_svmlight_file('fpw')
+tx, ty = load_svmlight_file(xfile)
 tx = tx.todense()
 #print tx,ty
 
