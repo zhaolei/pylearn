@@ -26,7 +26,7 @@ def rand_data(size=100, smax=1000):
 			y2.append(ya[0][num])
 		num += 1
 
-	pyplot.plot(x1, y1, 'ro', x2, y2, 'b^')
+	pyplot.plot(x1, y1, 'ro', x2, y2, 'b^', lx, ly)
 	pyplot.show()
 
 

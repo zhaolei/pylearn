@@ -36,7 +36,7 @@ print('Variance score: %.2f' % regr.score(diabetes_X_test, diabetes_y_test))
 #plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
 #plt.plot(diabetes_X_test, regr.predict(diabetes_X_test), color='blue',
 #        linewidth=3)
-print diabetes_X_test
+print(diabetes_X_test)
 
 #plt.xticks(())
 #plt.yticks(())
