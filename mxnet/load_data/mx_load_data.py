@@ -8,7 +8,7 @@ ita = mx.io.CSVIter(
     batch_size=1
     )
 
-print(ita)
+print(ita.getdata().asnumpy())
 
 data_iter = mx.io.CSVIter(data_csv='./lab.csv', data_shape=(1,), batch_size=1)
 print(data_iter)
